@@ -1,0 +1,110 @@
+/* GENERAL STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Font Size = 10px = 1rem = 62.5% of 16px */
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url('/images/black-background1.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100vw 100vh;
+  color: var(--white);
+}
+
+:root {
+  --white: #ffffff;
+  --gold: #ffbf5e;
+  --light-gold: #f5f2de;
+  --black: #000000;
+}
+
+.flex,
+.flex-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+/* MAIN STYLES */
+
+*/ .main-container {
+  max-width: 140rem;
+}
+
+.lamb {
+  position: fixed;
+  width: 4rem;
+  right: 0.5rem;
+  top: 0;
+}
+
+.lamb-small {
+  width: 3rem;
+  right: 5rem;
+}
+
+.masjed {
+  position: fixed;
+  max-width: 100rem;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.star {
+  position: fixed;
+  width: 20rem;
+  top: 20vh;
+  left: -10rem;
+  animation: rotate-clock-wise 10s linear infinite both;
+}
+
+.star-medium {
+  width: 10rem;
+  top: 7vh;
+  left: -5rem;
+  animation: rotate-counter-clock-wise 10s linear infinite both;
+}
+
+.star-small {
+  width: 6rem;
+  top: 14vh;
+  left: 5rem;
+  animation: rotate-clock-wise 10s linear infinite both;
+}
+
+/* ANIMATIONS */
+
+@keyframes rotate-clock-wise {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counter-clock-wise {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
